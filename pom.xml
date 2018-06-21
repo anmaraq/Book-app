@@ -3,7 +3,7 @@
   <groupId>com.qa.book-app</groupId>
   <artifactId>book-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+ <packaging>war</packaging>
   <!-- Properties -->
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
