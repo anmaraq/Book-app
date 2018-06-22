@@ -9,16 +9,33 @@
         			<th>{{'title' | uppercase}}</th>
         			<th>{{'genre' | uppercase}}</th>
         			<th>{{'yearPublished' | uppercase}}</th>
+        			<th>{{'author' | uppercase}}</th>
+                    <th>{{'ISBN' | uppercase}}</th>
        				<th>Delete</th>
         		</tr>
         		<tr ng-repeat="book in bookCtrl.books">
         			<td>{{book.title}}</td>
         			<td>{{book.genre}}</td>
         			<td>{{book.yearPublished}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.ISBN}}</td>
         			<td button class="btn" ng-click="bookCtrl.delete(book)">Delete</button></td>
         		</tr>
-        	</table>
+
+                </table>
+
+					<div>
+                  	
+					<form name ="formData">
+						<input type = "text" placeholder="Title" name ="bookTitle" ng-model ="bookCtrl.formData.title">
+						<input type = "text" placeholder="Genre" name ="genre" ng-model ="bookCtrl.formData.genre">
+						<input type = "text" placeholder="publish year" name "year" ng-model ="bookCtrl.formData.yearPublished">
+                        <input type = "text" placeholder="Author" name ="author" ng-model ="bookCtrl.formData.author">
+                        <input type = "text" placeholder="ISBN" name ="ISBN" ng-model ="bookCtrl.formData.ISBN">
+					</form>
+				</div>  
         </div>
+        <button class="btn" ng-click="bookCtrl.add(book)">Add books</button>
         <button class="btn" ng-click="bookCtrl.hideTable()">Hide books</button>
 	</div>
 </div>

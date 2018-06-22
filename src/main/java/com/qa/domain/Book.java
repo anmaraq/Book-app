@@ -23,6 +23,11 @@ public class Book {
 	private String genre;
 	@Size(min = 4, max = 4)
 	private String yearPublished;
+	@Size(min = 2, max = 80)
+	private String author;
+	@Size(min = 7, max = 13)
+	private String ISBN;
+	
 
 //	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 //	private Set<Author> authors = new HashSet<>();
@@ -35,7 +40,8 @@ public class Book {
 		this.title = title;
 		this.genre = genre;
 		this.yearPublished = yearPublished;
-//		this.authors = authors;
+		this.author = author;
+		this.ISBN = ISBN;
 	}
 
 	public String getTitle() {
@@ -68,6 +74,22 @@ public class Book {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public String getisbn() {
+		return ISBN;
+	}
+
+	public void setisbn(String ISBN) {
+		this.ISBN = ISBN;
 	}
 	
 //	public Set<Author> getAuthors() {

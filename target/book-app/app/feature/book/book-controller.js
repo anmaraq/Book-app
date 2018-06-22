@@ -17,6 +17,18 @@
         bookService.deleteBook(bookToDelete);
         bookService.getBooks().then(function(results){vm.books=results;});
     };
+
+          vm.add = function(){
+          var result = {"title":vm.formData.title,
+                         "genre":vm.formData.genre,
+                         "yearPublished":vm.formData.yearPublished,
+                     	"author":vm.formData.author,
+                     	"ISBN":vm.formData.ISBN};
+             bookService.saveBook(result);
+             bookService.getBooks().then(function (results) {
+             vm.books = results;});
+
+        }
         
         function init() {
         	bookService.getBooks().then(function (results) {

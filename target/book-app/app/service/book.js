@@ -14,6 +14,10 @@
         {
         	return bookDal.deleteBook(bookToDelete);
         }
+
+         this.saveBook = function(bookToSave){
+          return bookDal.saveBook(bookToSave);
+        };
         
     }
     
