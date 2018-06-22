@@ -26,7 +26,9 @@
                      	"ISBN":vm.formData.ISBN};
              bookService.saveBook(result);
              bookService.getBooks().then(function (results) {
-             vm.books = results;});
+             vm.books = results;
+         	location.reload();
+         });
 
         }
         

@@ -19,7 +19,7 @@
         			<td>{{book.yearPublished}}</td>
                     <td>{{book.author}}</td>
                     <td>{{book.ISBN}}</td>
-        			<td button class="btn" ng-click="bookCtrl.delete(book)">Delete</button></td>
+        			<td><button class="btn" ng-click="bookCtrl.delete(book)">Delete</button></td>
         		</tr>
 
                 </table>
@@ -32,8 +32,11 @@
 						<input type = "text" placeholder="publish year" name "year" ng-model ="bookCtrl.formData.yearPublished">
                         <input type = "text" placeholder="Author" name ="author" ng-model ="bookCtrl.formData.author">
                         <input type = "text" placeholder="ISBN" name ="ISBN" ng-model ="bookCtrl.formData.ISBN">
+
 					</form>
-				</div>  
+				</div> 
+                 
+                <br><br> 
         </div>
         <button class="btn" ng-click="bookCtrl.add(book)">Add books</button>
         <button class="btn" ng-click="bookCtrl.hideTable()">Hide books</button>
